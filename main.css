@@ -40,7 +40,7 @@ footer {
     padding: 1em;
     position:relative;
     bottom: 0;
-    width: 100%;
+    width: 98%;
 }
 
 
@@ -57,7 +57,7 @@ footer {
 #formulaire {
     background-color: #fff;
     padding: 20px;
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
 }
 

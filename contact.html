@@ -12,8 +12,8 @@
         <h1>Mahdi Gharbi</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="parcoursacademique.html">Parcours académique</a></li>
+                <li><a href="Acceuil.html">Accueil</a></li>
+                <li><a href="ParcourAcademique.html">Parcours académique</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -27,12 +27,12 @@
 
     <section id="formulaire">
         <h2>Formulaire de Contact</h2>
-        <form action="#" method="post">
+        <form name="f" action="#" method="post" onsubmit="return validateForm()">
             <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+            <input type="text" id="nom" name="nom" required><br>
 
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required><br>
 
             <label for="message">Message :</label>
             <textarea id="message" name="message" rows="4" required></textarea>
@@ -44,6 +44,21 @@
     <footer>
         <p>&copy; 2023-2024 Gharbi Mahdi - Portfolio</p>
     </footer>
+
+    <script>
+        function validateForm() {
+            var nom = document.f.nom.value;
+            var email = document.f.email.value;
+            var message = document.f.message.value;
+
+            if (nom === '' || email === '' || message === '') {
+                alert('Veuillez remplir tous les champs.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 
 </body>
 
